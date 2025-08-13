@@ -1,0 +1,10 @@
+HTTP methods
+=============
+
+| HTTP Method | URI          | Action | Description          |
+| ----------- | ------------ | ------ | -------------------- |
+| GET         | `/users`     | Read   | Get all users        |
+| GET         | `/users/101` | Read   | Get user with ID 101 |
+| POST        | `/users`     | Create | Add a new user       |
+| PUT         | `/users/101` | Update | Update user 101      |
+| DELETE      | `/users/101` | Delete | Remove user 101      |

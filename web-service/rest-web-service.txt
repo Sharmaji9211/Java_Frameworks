@@ -1,0 +1,16 @@
+RESTFul web service
+===================
+REST stands form representational state transfer
+
+A RESTful web service is a service that runs on web server that:
+1. Follows REST architecture style
+2. Uses standard HTTP methods(get,post,put,delete,patch,etc)
+3. Exposes data as resources, typically in JSON or XML
+
+Key Concepts in REST:
+====================
+1. Resource:Everything is a resource (e.g., user, product)
+2. URI:Each resource is identified by a URI (e.g., /users/101)
+3. Stateless:Server does not remember client state between requests
+4. HTTP Methods:Uses standard methods: GET, POST, PUT, DELETE
+5. Representations:Resource data is sent as JSON or XML (representation of the state)

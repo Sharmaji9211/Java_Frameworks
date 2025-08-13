@@ -1,0 +1,53 @@
+Data exchange format
+====================
+Two popular data exchange formats are as follows
+1)JSON format
+2)XML format
+
+JSON(Java script object notation) format
+----------------------------------------
+[
+  {
+    "pid":101,
+    "name":"Mouse",
+    "brand":"Logitech",
+    "price":1200
+  },
+  {
+    "pid":102,
+    "name":"Laptop",
+    "brand":"Dell",
+    "price":56000
+  }
+]
+
+XML(Extensible markup langyahe) format
+--------------------------------------
+<?xml version="1.0" ?>
+<productinfo>
+  <product>
+    <pid>101</pid>
+    <name>Mouse</name>
+    <brand>Logitech</brand>
+    <price>1200</price>
+  </product>
+  <product>
+    <pid>102</pid>
+    <name>Laptop</name>
+    <brand>Dell</brand>
+    <price>56000</price>
+  </product>
+</productinfo>
+
+
+
+
+
+
+
+
+
+
+
+
+

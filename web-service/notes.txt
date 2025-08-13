@@ -1,0 +1,20 @@
+Web services
+============
+Web services are software components that allow different applications (possibly built in different languages or running on different platforms) to communicate over a network, typically the internet, using standard protocols.
+For example react front-end is communicating with java back-end over a netwrok
+Creating web services means, creating RESTFul APIs
+Back-end will serve RESTFul APIs to front-end
+
+Types of Web Services:
+======================
+1. SOAP Web Services
+a)Protocol-based (uses XML)
+b)Heavier, with strict standards (WSDL, SOAP)
+Example: Enterprise banking systems
+
+2. RESTful Web Services (Most common today)
+a)Resource-based (uses HTTP methods: GET, POST, PUT, DELETE)
+b)Lightweight and fast
+c)Data format: mostly JSON and XML
+Example: APIs used by mobile apps, websites, etc.
+
