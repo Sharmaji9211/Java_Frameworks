@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html 
+>
+<%@ include file="menu.jsp" %>	
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Student Record</title>
+</head>
+<body onload='makeActive("delete")'>
+ 
+  <div class="delete-form">
+    <div class="form-header">
+      &#128465;&#65039; Delete Student Record
+    </div>
+    <form action="confirm-delete.jsp" method="get">
+      <div class="form-body">
+        <div class="form-group">
+          <label for="sid">Enter Student ID</label>
+          <input type="text" id="sid" th:value="${sid}" name="sid" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Delete Record</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div style="text-align: center">
+   <h3 style="color:red" th:text="${msg}"></h3>
+  </div>
+</body>
+</html>

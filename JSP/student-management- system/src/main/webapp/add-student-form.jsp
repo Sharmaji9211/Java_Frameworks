@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<%@ include file="menu.jsp" %>
+	<head>
+		<title>
+			Add Student | Student Management System
+		</title>
+	</head>
+	<body onload="makeActive('insert')">
+		<div class="form-container">
+			<h2> Add New Student Details </h2>
+			<form action="save-success.jsp" method="post">
+				<div class="form-group">
+					<label>Student ID</label>
+					<input type="text"  id="sid" name="sid" required>
+				</div>
+				<div class="form-group">
+					<label>Student Name</label>
+					<input type="text"  id="name" name="name" required>
+				</div>
+				<div class="form-group">
+					<label>Course</label>
+					<input type="text"  id="course" name="course" required>
+				</div>
+				<div class="form-group">
+					<label>Mobile NO</label>
+					<input type="text"  id="mobile" name="mobile" required>
+	 		</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input type="text"  id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label>Course Fee</label>
+					<input type="text"  id="fee" name="fee" required>
+				</div>
+				<div class="form-actions">
+					<button type="submit">Save Record</button>
+				</div>
+				
+			</form>
+		</div>
+		
+	</body>
+</html>
