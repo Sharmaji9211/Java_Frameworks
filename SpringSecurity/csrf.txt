@@ -1,0 +1,13 @@
+CSRF
+====
+In Spring Security, CSRF (Cross-Site Request Forgery) protection is enabled by default to prevent malicious third-party websites from making unwanted requests on behalf of authenticated users. However, you might see CSRF disabled in certain cases, especially in REST APIs or development environments.
+
+Why CSRF is sometimes disabled:
+==============================
+1. Stateless REST APIs
+CSRF attacks target applications that use cookies for authentication (like session-based logins).
+REST APIs are usually stateless and use tokens (like JWT) in headers, not cookies.
+Since there's no session or cookie-based auth, CSRF protection is not needed.
+That’s why you’ll often see:
+
+http.csrf().disable();

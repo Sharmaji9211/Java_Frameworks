@@ -1,0 +1,6 @@
+Spring security
+===============
+Spring Security is a powerful and customizable authentication and access-control framework for Spring applications. It is the standard for securing Spring-based applications.
+
+1. Authentication:Verifying the identity of a user (e.g., login with username & password).
+2. Authorization:Granting access to specific resources based on roles/permissions.

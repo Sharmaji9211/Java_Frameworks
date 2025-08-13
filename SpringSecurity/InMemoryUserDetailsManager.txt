@@ -1,0 +1,3 @@
+InMemoryUserDetailsManager class
+================================
+The InMemoryUserDetailsManager in Spring Security is a class used to store user details (like usernames, passwords, and roles) in memory, typically for development, testing, or simple applications. It implements the UserDetailsService interface, which is a core part of Spring Security's authentication mechanism.
