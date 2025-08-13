@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.org.thymeleaf">
+<div th:insert="menu"></div>	
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Success</title>
+  </head>
+  <body onload='makeActive("delete")'>
+
+  <div class="success-box">
+    <div class="icon">🗑️</div>
+    <h2>Student Record Deleted Successfully</h2>
+    <p>Student have ID <strong th:text="${sid}"></strong> has been removed from the system.</p>
+    <form action="student">
+      <button class="btn">Back to Product List</button>
+    </form>
+  </div>
+  </body>
+  </html>

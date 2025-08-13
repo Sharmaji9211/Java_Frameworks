@@ -1,0 +1,122 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Search Container */
+.search-container {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Header */
+.form-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a237e;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Form Body */
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Labels */
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+/* Input Field */
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #4facfe;
+  outline: none;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.4);
+}
+
+/* Button */
+.form-actions button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a237e;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-actions button:hover {
+  background-color: #0d1b63;
+  transform: scale(1.03);
+}
+
+/* Error Message */
+h3 {
+  margin-top: 20px;
+  font-size: 16px;
+  color: red;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-container {
+    padding: 30px 25px;
+  }
+
+  .form-header {
+    font-size: 20px;
+  }
+
+  .form-actions button {
+    font-size: 14px;
+  }
+}

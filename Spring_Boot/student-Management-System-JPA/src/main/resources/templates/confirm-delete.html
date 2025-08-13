@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.org.thymeleaf">
+<div th:insert="menu"></div>	
+<head>
+  <meta charset="UTF-8">
+  <title>Confirm Delete</title> 
+  <link rel="stylesheet" th:href="@{/CSS/confirm-delete.css}">
+	</head>
+	<body onload='makeActive("delete")'>
+	 
+	  <form action="delete-record" method="get">
+	    <div class="confirm-box">
+	      <div class="confirm-header">
+	        <i class="fas fa-trash-alt"></i> Confirm Deletion
+	      </div>
+	      <table>
+	        <tr>
+	          <th>Student ID</th>
+	          <td th:text="${student.sid}"></td>
+			  <input type="hidden" name="sid" th:value="${student.sid}">
+	        </tr>
+	        <tr>
+	          <th>Student Name</th>
+	          <td th:text="${student.name}"></td>
+	        </tr>
+	        <tr>
+	          <th> Mobile</th>
+	          <td th:text="${student.mobile}"></td>
+	        </tr>
+	        <tr>
+	          <th> Email</th>
+	          <td th:text="${'&#8377'+student.email}"></td>
+	        </tr>
+			<tr>
+			<th> course</th>
+			<td th:text="${student.course}"></td>
+				</tr>
+			    <tr>
+			        <th>Fee</th>
+			          <td th:text="${'&#8377'+student.fee}"></td>
+			        </tr>
+	      </table>
+	      <div class="actions">
+	        <span>Are you sure you want to delete?</span>
+	        <button type="submit" class="btn btn-yes">Yes</button>
+	        <button type="button" class="btn btn-no" onclick="history.back()">No</button>
+	      </div>
+	    </div>
+	  </form>
+	</body>
+	</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Student Data Table</title>
+	<link rel="stylesheet" th:href="@{/CSS/studentList.css}"> <!-- Thymeleaf path -->
+</head>
+
+<body onload="makeActive('list')">
+	<div th:insert="menu"></div>
+
+	<table id="studentTable">
+		<thead>
+			<tr>
+				<th onclick="sortTable(0)">Student ID</th>
+				<th onclick="sortTable(1)">Student Name</th>
+				<th>Mobile</th>
+				<th>Email</th>
+				<th>Course</th>
+				<th onclick="sortTable(5)">Fee</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="student : ${plist}">
+				<td data-label="Student ID" th:text="${student.sid}"></td>
+				<td data-label="Student Name" th:text="${student.name}"></td>
+				<td data-label="Mobile" th:text="${student.mobile}"></td>
+				<td data-label="Email" th:text="${student.email}"></td>
+				<td data-label="Course" th:text="${student.course}"></td>
+				<td data-label="Fee" th:text="${student.fee}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		function sortTable(columnIndex) {
+			const table = document.getElementById("studentTable");
+			const tbody = table.tBodies[0];
+			const rows = Array.from(tbody.rows);
+
+			const isNumeric = !isNaN(rows[0].cells[columnIndex].textContent.trim());
+
+			const sortedRows = rows.sort((a, b) => {
+				const aText = a.cells[columnIndex].textContent.trim();
+				const bText = b.cells[columnIndex].textContent.trim();
+
+				return isNumeric
+					? parseFloat(aText) - parseFloat(bText)
+					: aText.localeCompare(bText);
+			});
+
+			sortedRows.forEach(row => tbody.appendChild(row));
+		}
+	</script>
+</body>
+</html>

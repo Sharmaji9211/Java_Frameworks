@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.org.thymeleaf">
+	<head>
+		<title>
+			Student Management System
+		</title>
+		<link rel="stylesheet" th:href="@{CSS/menu.css}">
+		<script th:src="@{JS/menu.js}"></script>
+		<body>
+			<nav class="navbar">
+				<div class="nav-container">
+					<div class="brand">STUDENT MANAGEMENT SYSTEM</div>
+					<ul class="nav-menu">
+						<li><a id="home" href="/">Home</a></li>
+						<li><a id="insert" href="insert">Add Student</a></li>
+						<li><a id="list" href="student">View All Students</a></li>
+						<li><a id="delete" href="delete">Delete Record</a></li>
+						<li><a id="edit" href="edit">Edit Record</a></li>
+						<li><a id="serach" href="search">Search Record</a></li>
+					</ul>
+				</div>
+			</nav>
+		</body>
+	</head>
+</html>

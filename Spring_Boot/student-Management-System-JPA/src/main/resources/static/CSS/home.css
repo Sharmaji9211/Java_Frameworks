@@ -1,0 +1,125 @@
+/* home.css */
+
+/* Base + Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centering Home */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+ 
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Home Box */
+.home {
+  background: rgb(128, 128, 255);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-top: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.home:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing Border */
+.home::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #1fd1f9);
+  z-index: -1;
+  border-radius: 25px;
+  background-size: 400% 400%;
+  animation: gradientBorder 8s ease infinite;
+}
+
+.msg {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #2575fc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #6a11cb;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .home {
+    padding: 25px;
+  }
+
+  .msg {
+    font-size: 24px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

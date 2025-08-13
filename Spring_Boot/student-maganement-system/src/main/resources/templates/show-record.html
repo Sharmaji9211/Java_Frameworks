@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.org.thymeleaf">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Search Result</title>
+
+</head>
+<body onload='makeActive("search")'>
+  <div th:insert="menu"></div>
+  <div class="product-card">
+    <h2>Student Details</h2>
+    <table>
+      <tr>
+        <th>Student Id</th>
+        <td th:text="${student.sid}"></td>
+      </tr>
+      <tr>
+        <th>Student Name</th>
+        <td th:text="${student.name}"></td>
+      </tr>
+      <tr>
+        <th>Mobile</th>
+        <td th:text="${student.mobile}"></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td th:text="${'&#8377;'+student.email}"></td>
+      </tr>
+	  <tr>
+	          <th>Course</th>
+	          <td th:text="${student.course}"></td>
+	        </tr>
+	        <tr>
+	          <th>Fee</th>
+	          <td th:text="${'&#8377;'+student.fee}"></td>
+	        </tr>	  
+    </table>
+  </div>
+</body>
+</html>

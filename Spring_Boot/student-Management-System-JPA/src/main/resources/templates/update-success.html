@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.org.thymeleaf">
+<div th:insert="menu"></div>	
+<head>
+  <meta charset="UTF-8">
+  <title>Update Confirmation</title>
+  <link rel="stylesheet" href="update.css">
+ 
+	</head>
+	<body onload='makeActive("edit")'>
+	  <div class="confirmation-container">
+	    <h2>&#x2705; Product Updated Successfully</h2>
+	    <p>Student record  with ID <strong th:text="${sid}"></strong> has been updated in the database.</p>
+	    <div class="btn-group">
+	      <button class="btn btn-home" onclick="location.href='/'">Home</button>
+	      <button class="btn btn-back" onclick="history.back()">Back</button>
+	    </div>
+	  </div>
+	</body>
+	</html>
