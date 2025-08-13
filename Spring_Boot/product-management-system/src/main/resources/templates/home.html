@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.org.thymeleaf">
+<div th:insert="menu"></div>	
+<head>
+  <meta charset="UTF-8">
+  <title>Product Management System | Home</title>
+  <link rel="stylesheet" href="CSS/product.css"> <!-- Optional external CSS -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .dv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .msg {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #636e72;
+      margin-top: 12px;
+      max-width: 600px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .msg {
+        font-size: 26px;
+      }
+      .subtitle {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .msg {
+        font-size: 22px;
+      }
+      .subtitle {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body onload='makeActive("home")'>
+  <div class="dv">
+    <h2 class="msg">👋 Welcome to the Product Management System</h2>
+    <p class="subtitle">Manage, search, update, and delete product records with ease — all in one place.</p>
+  </div>
+</body>
+</html>
